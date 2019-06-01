@@ -12,7 +12,6 @@
 {{ end }}
 
 <!-- Custom css -->
-{{ range .Site.Params.customCSS -}}
-    {{ $style := resources.Get . }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" media="screen">
-{{- end }} 
+{{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
