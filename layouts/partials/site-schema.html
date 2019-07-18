@@ -1,4 +1,4 @@
-{{ if .IsHome -}}
+{{ if eq .Kind "home" -}}
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -29,7 +29,7 @@
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
-  "@type": "BlogPosting",
+  "@type": "{{ .SchemaType }}",
   "headline": "{{ .Title }}",
   "mainEntityOfPage": {
     "@type": "WebPage",
