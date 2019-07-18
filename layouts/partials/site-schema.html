@@ -1,4 +1,9 @@
-{{ if eq .Url "/" -}}
+{{ .RelPermalink }}
+{{ .IsHome }}
+{{ .Permalink }}
+{{ .Kind }}
+
+{{ if eq .RelPermalink "/" -}}
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
