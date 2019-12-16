@@ -15,3 +15,6 @@
 {{ else }}
 <link rel="canonical" href="{{ .Site.baseUrl }}">
 {{ end }}
+{{ if .Params.comments }}
+<script src="https://hypothes.is/embed.js" async></script>
+{{ end }}
